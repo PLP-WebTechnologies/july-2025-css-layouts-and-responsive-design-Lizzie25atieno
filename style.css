@@ -1,0 +1,96 @@
+/* Reset default styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+/* Header and Footer */
+header, footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+/* Navigation bar using Flexbox */
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  background: #444;
+}
+
+nav li {
+  margin: 0.5rem;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  padding: 0.5rem 1rem;
+}
+
+nav a:hover {
+  background: #666;
+  border-radius: 5px;
+}
+
+/* Main layout using CSS Grid */
+main {
+  display: grid;
+  grid-template-columns: 3fr 1fr; 
+  gap: 1rem;
+  padding: 1rem;
+}
+
+/* Content area */
+.content h2 {
+  margin-bottom: 1rem;
+}
+
+/* Cards using Flexbox */
+.card-container {
+  display: flex; 
+  gap: 1rem;
+  flex-wrap: wrap; /* Wrap on smaller screens */
+}
+
+.card {
+  background: #f4f4f4;
+  padding: 1rem;
+  border-radius: 5px;
+  flex: 1 1 200px; /* Flexible width */
+}
+
+/* Sidebar */
+aside {
+  background: #eee;
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+/* Responsive Design */
+/* For tablets */
+@media (max-width: 900px) {
+  main {
+    grid-template-columns: 2fr 1fr; /* Slightly smaller sidebar */
+  }
+}
+
+/* For mobile */
+@media (max-width: 600px) {
+  main {
+    grid-template-columns: 1fr; /* Stack content and sidebar */
+  }
+
+  nav ul {
+    flex-direction: column; /* Stack menu items */
+    align-items: center;
+  }
+}
